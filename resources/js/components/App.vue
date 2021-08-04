@@ -4,7 +4,7 @@
           <span class="visually-hidden">Loading...</span>
         </div>
         <div class="row mb-1">
-            <div class="col-12" v-for="item in descriptions" v-if="loading == false">
+            <div class="col-12" v-for="item in descriptions" v-if="descriptions.length > 0">
                 <card :item="item"></card>
             </div>
         </div>
@@ -23,15 +23,13 @@ export default {
         };
     },
     mounted() {
-        let self = this;
-
         axios.get('/api/v1/descriptions')
             .then(res => {
                 console.log(res);
-                self.descriptions = res.data
-                self.loading = false;
+                this.descriptions = res.data
+                this.loading = false;
             }).catch(err => {
-            console.log(err)
+                console.log(err)
         })
     },
     components: { card }
