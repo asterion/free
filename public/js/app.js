@@ -1871,11 +1871,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    var self = this;
+    var _this = this;
+
     axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/v1/descriptions').then(function (res) {
       console.log(res);
-      self.descriptions = res.data;
-      self.loading = false;
+      _this.descriptions = res.data;
+      _this.loading = false;
     })["catch"](function (err) {
       console.log(err);
     });
@@ -1945,23 +1946,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var vue_timeago__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-timeago */ "./node_modules/vue-timeago/dist/vue-timeago.es.js");
 /* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-
-vue__WEBPACK_IMPORTED_MODULE_3__.default.use(vue_timeago__WEBPACK_IMPORTED_MODULE_0__.default, {
+vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_timeago__WEBPACK_IMPORTED_MODULE_0__.default, {
   name: 'Timeago',
   locale: 'es',
   locales: {
     es: __webpack_require__(/*! date-fns/locale/es */ "./node_modules/date-fns/locale/es/index.js")
   }
 });
-new vue__WEBPACK_IMPORTED_MODULE_3__.default({
+new vue__WEBPACK_IMPORTED_MODULE_2__.default({
   el: '#app',
   components: {
     App: _components_App_vue__WEBPACK_IMPORTED_MODULE_1__.default
@@ -3836,7 +3834,7 @@ var render = function() {
       "div",
       { staticClass: "row mb-1" },
       _vm._l(_vm.descriptions, function(item) {
-        return _vm.loading == false
+        return _vm.descriptions.length > 0
           ? _c(
               "div",
               { staticClass: "col-12" },
@@ -3920,8 +3918,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", { staticClass: "card-text" }, [
-      _c("span", { staticClass: "material-icons material-icons-outlined" }, [
-        _vm._v("shopping_cart")
+      _c("span", { staticClass: "material-icons material-icons-book" }, [
+        _vm._v("book")
       ])
     ])
   }

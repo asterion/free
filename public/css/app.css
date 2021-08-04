@@ -12277,7 +12277,10 @@ textarea.form-control-lg {
 }
 body {
   font-family: "Lato", sans-serif;
-  background: #333641;
+}
+
+.text-orange {
+  color: #ff5a00;
 }
 
 .effect {
