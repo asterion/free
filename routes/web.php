@@ -20,6 +20,6 @@ $router->get('/', function () use ($router) {
 $router->get('/', 'DefaultController@index');
 
 $router->get('/api/v1/descriptions', function () use ($router) {
-    $results = app('db')->select("SELECT * FROM texto_imprimir LIMIT 0, 10");
+    $results = app('db')->select('SELECT id, letra, texto, fecha FROM texto_imprimir ORDER BY letra DESC LIMIT 0, 10');
     return $results;
 });
