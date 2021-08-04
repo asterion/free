@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-4 col-xl-6">
-                    <h1 class="my-3 text-white">BuscaLibre</h1>
+                    <h1 class="my-3 text-orange">BuscaLibre</h1>
                 </div>
             </div>
         </div>
