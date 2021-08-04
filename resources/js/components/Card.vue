@@ -16,7 +16,7 @@
                 {{ item.texto }}
             </p>
             <p class="card-text">
-                <span class="material-icons material-icons-outlined">shopping_cart</span>
+                <span class="material-icons material-icons-book">book</span>
             </p>
           </div>
         </div>
